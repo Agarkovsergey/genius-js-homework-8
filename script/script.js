@@ -1,17 +1,24 @@
-// -----1-----
-// Напишіть код, щоб вибрати елемент з атрибутом data-widget-name з документа
-// та прочитати його значення.
-// <!DOCTYPE html>
-// <html>
-// <body>
-// <div data-widget-name="menu">Виберіть жанр</div>
-// <script>/* ваш код */</script>
-// </body>
-// </html>
-let output = document.getElementById('output');
+// -----1----
+// Напишіть такий JavaScript, щоб після натискання на кнопку button, елемент
+// <div id="text"> зникав.
+// -----2----
+// Напишіть такий код, щоб після натискання на кнопку, вона зникала.
+// -----3----
+// Створіть дерево, яке показує/приховує дочірні вузли при кліці
 
-const widget = document.querySelector('[data-widget-name]');
+const hideDiv = document.getElementById('hideDiv');
+const hideBtn = document.getElementById('hideBtn');
+const toggleBtn = document.getElementById('toggleBtn');
 
-const p = document.createElement('p');
-p.textContent = widget.getAttribute('data-widget-name');
-output.appendChild(p);
+const divToHide = document.getElementById('text');
+
+hideDiv.addEventListener('click', function () {
+  divToHide.classList.add('hidden');
+});
+hideBtn.addEventListener('click', function () {
+  hideBtn.classList.add('hidden');
+});
+toggleBtn.addEventListener('click', function () {
+  divToHide.classList.toggle('hidden');
+  hideBtn.classList.toggle('hidden');
+});

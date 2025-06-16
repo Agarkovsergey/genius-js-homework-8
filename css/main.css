@@ -154,7 +154,17 @@ address {
   color: #ffffff;
 }
 
+.hidden {
+  display: none;
+}
+
 #output {
   margin-top: 10px;
   border: 1px solid tomato;
+}
+
+button {
+  display: block;
+  width: 100px;
+  margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */
