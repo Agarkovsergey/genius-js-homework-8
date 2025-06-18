@@ -8,7 +8,6 @@
 
 const hideDiv = document.getElementById('hideDiv');
 const hideBtn = document.getElementById('hideBtn');
-
 const divToHide = document.getElementById('text');
 const tree = document.querySelector('.tree');
 
