@@ -8,9 +8,9 @@
 
 const hideDiv = document.getElementById('hideDiv');
 const hideBtn = document.getElementById('hideBtn');
-const toggleBtn = document.getElementById('toggleBtn');
 
 const divToHide = document.getElementById('text');
+const tree = document.querySelector('.tree');
 
 hideDiv.addEventListener('click', function () {
   divToHide.classList.add('hidden');
@@ -18,7 +18,13 @@ hideDiv.addEventListener('click', function () {
 hideBtn.addEventListener('click', function () {
   hideBtn.classList.add('hidden');
 });
-toggleBtn.addEventListener('click', function () {
-  divToHide.classList.toggle('hidden');
-  hideBtn.classList.toggle('hidden');
+
+document.querySelectorAll('.tree > li > span').forEach(span => {
+  span.addEventListener('click', () => {
+    const parentLi = span.parentElement;
+    const internalList = parentLi.querySelector('ul');
+    if (internalList) {
+      internalList.style.display = internalList.style.display === 'block' ? 'none' : 'block';
+    }
+  });
 });

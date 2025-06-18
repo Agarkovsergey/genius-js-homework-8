@@ -167,4 +167,9 @@ button {
   display: block;
   width: 100px;
   margin-top: 20px;
+}
+
+.tree ul {
+  display: none; /* спочатку приховані */
+  margin-left: 20px;
 }/*# sourceMappingURL=main.css.map */
