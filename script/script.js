@@ -18,12 +18,25 @@ hideBtn.addEventListener('click', function () {
   hideBtn.classList.add('hidden');
 });
 
-document.querySelectorAll('.tree > li > span').forEach(span => {
-  span.addEventListener('click', () => {
-    const parentLi = span.parentElement;
-    const internalList = parentLi.querySelector('ul');
+// document.querySelectorAll('.tree > li > span').forEach(span => {
+//   span.addEventListener('click', () => {
+//     const parentLi = span.parentElement;
+//     const internalList = parentLi.querySelector('ul');
+//     if (internalList) {
+//       internalList.style.display = internalList.style.display === 'block' ? 'none' : 'block';
+//     }
+//   });
+// });
+document.querySelector('.tree').addEventListener('click', function (event) {
+  if (event.target.tagName === 'SPAN') {
+    const li = event.target.parentElement;
+    const internalList = li.querySelector('ul');
     if (internalList) {
-      internalList.style.display = internalList.style.display === 'block' ? 'none' : 'block';
+      if (internalList.style.display === 'block') {
+        internalList.style.display = 'none';
+      } else {
+        internalList.style.display = 'block';
+      }
     }
-  });
+  }
 });
